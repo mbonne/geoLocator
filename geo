@@ -6,6 +6,7 @@
 ##         Purpose:  Commandline tool to Find Country location from devices WAN IP using API call and check against a list of Country names.
 ##                   If script run with no IP/FQDN, will use your current WAN IP. 
 ##                   If IP or FQDN specified will process that.
+##                   Dependant on cli tool jq being installed on your system.
 ##         Created:  2019-12-01
 ##   Last Modified:  2022-08-20
 ##         Version:  3
