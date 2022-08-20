@@ -1,4 +1,4 @@
-# geoLocater
+# geoLocator aka geo
 Simple script to find geo location of public IP address
 
 To install, add script file to your path.
