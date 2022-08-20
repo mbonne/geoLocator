@@ -7,7 +7,7 @@
 ##                   If script run with no IP/FQDN, will use your current WAN IP. 
 ##                   If IP or FQDN specified will process that.
 ##         Created:  2019-12-01
-##   Last Modified:   2022-08-20
+##   Last Modified:  2022-08-20
 ##         Version:  3
 ##          Source: https://stackoverflow.com/questions/12030316/nesting-if-in-a-for-loop
 ##                  https://www.programiz.com/python-programming/nested-dictionary
