@@ -121,7 +121,7 @@ do
       echo -e "${GREEN}Opening Virus Total${NOCOLOR}" && open "$virusTotal"
       break
       ;;
-     "$talosNetwork")
+      "$talosNetwork")
       echo -e "${GREEN}Opening Talos Intelligence${NOCOLOR}" && open "$talosNetwork"
       break
       ;;
