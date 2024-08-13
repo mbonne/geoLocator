@@ -103,13 +103,14 @@ fi
 googleMap="https://www.google.com/maps/search/?api=1&query=$latitudeLongitude&z=13"
 #googleMap="https://www.google.com/maps/search/?api=1&query=$latitude,$longitude&z=13"
 #googleMap="https://maps.google.com/?ie=UTF8&hq=&ll=$longitude,$latitude&z=13"
-virusTotal="https://www.virustotal.com/gui/ip-address/$wanIP"
-talosNetwork="https://talosintelligence.com/reputation_center/lookup?search=$wanIP"
+virusTotal="https://www.virustotal.com/gui/ip-address/$1"
+talosNetwork="https://talosintelligence.com/reputation_center/lookup?search=$1"
+mxToolbox="https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a$1&run=toolpage"
 
 ##Display the interactive menu:
 ##https://askubuntu.com/questions/1705/how-can-i-create-a-select-menu-in-a-shell-script
 PS3="Type Number to open Website: "
-options=("$googleMap" "$virusTotal" "$talosNetwork" "Quit")
+options=("$googleMap" "$virusTotal" "$talosNetwork" "$mxToolbox" "Quit")
 select opt in "${options[@]}"
 do
   case $opt in
@@ -123,6 +124,10 @@ do
       ;;
      "$talosNetwork")
       echo -e "${GREEN}Opening Talos Intelligence${NOCOLOR}" && open "$talosNetwork"
+      break
+      ;;
+      "$mxToolbox")
+      echo -e "${GREEN}Opening MX Toolbox blacklist${NOCOLOR}" && open "$mxToolbox"
       break
       ;;
     "Quit")
