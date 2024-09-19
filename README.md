@@ -1,24 +1,46 @@
 # geoLocator aka geo
-Simple script to find geo location of public IP address
+
+## Install
+
+Simple script to find geo location of public IP address using dig, jq, openDNS resolver, and `https://ipinfo.io`
 
 To install, add script file to your path.
-For example, create a bin directory to your homefolder and add that to your path.
-e.g: follow this guide: https://apple.stackexchange.com/questions/99788/os-x-create-a-personal-bin-directory-bin-and-run-scripts-without-specifyin
 
+make the directory:
+`mkdir -p $HOME/bin`
 
-# Running it:
+Then add the following line to ~/.profile, ~/.bashrc, or ~/.zshrc
+
+`export PATH=$HOME/bin:$PATH`
+
+Symlink the script to custom bin folder:
+`ln -s /Path/to/Github\ Folders/geoLocator/geo $HOME/bin/geo`
+
+Then reload shell. Quit and reload terminal or:
+`source $HOME/.profile`
+
+### Dependancy
+
+Script uses jq to assist with formatting the curl request to ipinfo.io
+on macOS you can install with:
+
+`brew install jq`
+
+or preferred method of installing 3rd party apps.
+
+## Usage
+
 Type geo in terminal, hit return.
-If checkin a specific IP address, 
-type: 
+If checkin a specific IP address,
+type:
+
 `geo 8.8.8.8`
 
-
-
-Once it runs against given IP address, you can choose to open google map or virus total.
-
+Once it runs against given IP address, you can type number from the menu to open one of the url in default webbrowser on your system.
 
 ## Example
-```
+
+```shell
 $ geo 8.8.8.8
 
 Target IP:    8.8.8.8
